@@ -1,0 +1,27 @@
+{
+  "name": "lab6-ejs",
+  "version": "1.0.0",
+  "description": "This is a node web server using EJS (Embedded JavaScript Template) ",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Lab-6-EJS-Multer"
+  },
+  "keywords": [
+    "Ejs",
+    "Javascript",
+    "Node.js"
+  ],
+  "author": "Carlos López",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7"
+  }
+}

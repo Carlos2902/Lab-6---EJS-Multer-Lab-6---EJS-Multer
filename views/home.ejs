@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+<body>
+    <%- include('partials/header', {page: 'Home'}) %>
+    Home
+    <body class="px-2">
+  
+
+        <div class="card bg-base-200  max-w-[700px] mx-auto p-5 mt-6">
+     
+            <form method="post" action="/submit-urlencoded">
+     
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+     
+                    <!-- Hidden -->
+     
+                    <input type="hidden" name="hiddenSample" value="Hidden Field Value" />
+     
+                    <!-- Input -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Input</span>
+                        </label>
+                        <input type="text" name="inputSample" placeholder="Type here" class="input input-bordered" />
+                    </div>
+     
+                    <!-- Select -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Select</span>
+                        </label>
+                        <select name="selectSample" class="select select-bordered w-full">
+                            <option disabled="disabled" selected="selected">Choose an option</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+     
+                    <!-- Select -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Select Multiple</span>
+                        </label>
+                        <select name="select-multipleSample" size="3" multiple
+                            class="select-multiple text-sm  w-full p-4 rounded-lg border border-solid border-slate-300">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+     
+                    <!-- textarea -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Textarea</span>
+                        </label>
+                        <textarea name="textareaSample" class="textarea textarea-bordered h-24"></textarea>
+                    </div>
+     
+                    <!-- Checkbox -->
+                    <div class="form-control">
+                        <label class="cursor-pointer label w-0">
+                            <input name="checkboxSample" type="checkbox" class="checkbox" />
+                            <span class="label-text ml-2">Checkbox</span>
+                        </label>
+                    </div>
+     
+                    <!-- Radio -->
+                    <div class="form-control">
+                        <label class="cursor-pointer label w-0">
+                            <input type="radio" class="radio" name="radioSample" value="Option 1" />
+                            <span class="label-text ml-2">Option&nbsp;1</span>
+                        </label>
+                        <label class="cursor-pointer label w-0">
+                            <input type="radio" class="radio" name="radioSample" value="Option 2" />
+                            <span class="label-text ml-2">Option&nbsp;2</span>
+                        </label>
+                        <label class="cursor-pointer label w-0">
+                            <input type="radio" class="radio" name="radioSample" value="Option 3" />
+                            <span class="label-text ml-2">Option&nbsp;3</span>
+                        </label>
+                    </div>
+     
+                </div>
+     
+                <div class="grid grid-cols-1">
+     
+                    <!-- Buttons -->
+                    <div class="form-control mt-6">
+                        <button class="btn btn-primary">Submit Urlencoded Form</button>
+                    </div>
+                </div>
+     
+            </form>
+        </div>
+        <br />
+        <div class="card bg-base-200  max-w-[700px] mx-auto p-5 mt-6">
+     
+            <form method="post" action="/submit-multipart" enctype="multipart/form-data">
+     
+                <div class="grid grid-cols-1">
+     
+                    <!-- Input -->
+     
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">File Description</span>
+                        </label>
+                        <input type="text" name="fileDescription" placeholder="Type here" class="input input-bordered" />
+                    </div>
+     
+     
+                    <!-- File -->
+     
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">File</span>
+                        </label>
+                        <input type="file" name="fileSample" />
+                    </div>
+     
+     
+                     <!-- Buttons -->
+                     <div class="form-control mt-6">
+                        <button class="btn btn-success">Submit Multipart Form</button>
+                    </div>
+     
+                </div>
+     
+               
+     
+            </form>
+        </div>
+     
+    </body>
+    <%- include('partials/footer', {page: 'Home'}) %>
+
+</body>
+</html>
